@@ -1,9 +1,13 @@
 import React from 'react';
+import Home from '../components/Home'
 
 export default function Main() {
     return (
         <main>
-            <h1>Main here</h1>
+            <div className="container-fluid p-0">
+                <Home />
+                {/* add Projects component here */}
+            </div>
         </main>
     )
 }

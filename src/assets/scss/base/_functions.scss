@@ -1,0 +1,37 @@
+// Functions
+
+@use "sass:math";
+
+$rem-base: 16px; // Bootstrap 4's base font size is 16px. Do not change this.
+
+// strip-unit()
+// strips the unit of measure and returns it
+// used by rem-calc()
+@function strip-unit($num) {
+  @return math.div($num, ($num * 0 + 1));
+}
+
+// convert-to-rem()
+@function convert-to-rem($value, $base-value: $rem-base) {
+  $value: calc(strip-unit($value) / strip-unit($base-value)) * 1rem;
+  // scss-lint:disable ZeroUnit
+  @if($value == 0rem) {
+    $value: 0;
+  } // Turn 0em into 0
+  // scss-lint:enable ZeroUnit
+  @return $value;
+}
+
+// rem-calc()
+// turns pixel values into rem values (expects 1 to 4 arguments)
+@function rem-calc($values, $base-value: $rem-base) {
+  $max: length($values);
+  @if $max == 1 {
+    @return convert-to-rem(nth($values, 1), $base-value);
+  }
+  $rem-values: ();
+  @for $i from 1 through $max {
+    $rem-values: append($rem-values, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $rem-values;
+}

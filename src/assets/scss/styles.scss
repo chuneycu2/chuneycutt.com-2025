@@ -1,5 +1,6 @@
 // Define variables, import functions and mixins
 @use '_variables.scss' as *;
+@use 'base/_functions.scss';
 @use 'base/_mixins.scss';
 
 // Import AOS (animations)
@@ -10,3 +11,10 @@
 
 // Import Bootstrap core styles
 @use 'base/_bootstrap.scss';
+
+// Import typography
+@use 'base/_typography.scss';
+
+// Import component styles
+@use 'components/_main.scss';
+@use 'components/_home.scss';

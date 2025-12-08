@@ -1,0 +1,12 @@
+@use '../_variables.scss' as *;
+
+main {
+  background: $bg-gradient;
+  height: 100vh;
+  .container-fluid {
+    max-width: $xl;
+  }
+  .container-main {
+    padding: 2.25rem;
+  }
+}
