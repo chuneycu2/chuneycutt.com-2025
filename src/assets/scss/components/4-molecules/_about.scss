@@ -1,6 +1,7 @@
 @use '../../variables' as *;
 @use '../../base/mixins' as mixins;
 
+// See section-entry for .content styles
 .section-entry {
   &.about,
   &.accolade {

@@ -17,7 +17,6 @@ export default function SectionEntries() {
             <article className="section-entry experience">
                 <Experiences/>
             </article>
-
             {/* place end-of-section links outside of articles */}
             <aside>
                 <ProjectLinks/>

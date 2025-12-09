@@ -8,7 +8,7 @@ export default function Home() {
         <div className="container-main home row m-0">
             <Sidebar/>
             <Content/>
-            {/* TODO: add transitions between 1-pages with useTransition */}
+            {/* TODO: add transitions between pages with useTransition */}
         </div>
     )
 }

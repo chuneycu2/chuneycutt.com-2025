@@ -3,6 +3,7 @@
 
 .sidebar {
   @include mixins.media-breakpoint-up(md) {
+    height: 100%;
     position: sticky;
     top: 2.25rem;
   }

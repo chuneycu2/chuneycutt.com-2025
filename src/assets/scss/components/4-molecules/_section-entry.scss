@@ -42,9 +42,8 @@
             h3 {
                 color: $teal;
             }
-            &:after {
-                background-color: $gray;
-                opacity: .15;
+            p, li {
+                color: $white;
                 transition: .4s;
             }
             .skill {
@@ -54,6 +53,11 @@
                 a {
                     color: $teal;
                 }
+            }
+            &:after {
+                background-color: $gray;
+                opacity: .15;
+                transition: .4s;
             }
         }
     }
