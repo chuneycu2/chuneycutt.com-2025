@@ -5,8 +5,8 @@ import IconAnalytics from "../5-atoms/icons/IconAnalytics.jsx";
 import IconGear from "../5-atoms/icons/iconGear.jsx";
 
 export default function SkillsAndTools(props) {
-    console.log(props);
-    const { id, icon, discipline, type } = props.content;
+    //console.log(props);
+    const { icon, discipline, type } = props.content;
 
     const getIcon = (category) => {
         if (category === "development") return <IconDevelopment type={"top-icon"} />

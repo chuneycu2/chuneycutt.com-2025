@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 
 /**
- * Parses incoming data and returns all relevant objects for the current page URL
+ * Parses incoming page data and returns all relevant objects for the current page URL
  */
 export default function DataParser(data) {
     // location.pathname "/" maps to slug 'home'
