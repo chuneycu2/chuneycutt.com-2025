@@ -10,10 +10,7 @@ export default function Home() {
 
     // Fetch page and media data
     const data  = useLoaderData();
-    const pageData = DataParser(data[0]);
-    const mediaData = MediaParser(data);
-    //const mediaData = data[1];
-    console.log(mediaData);
+    const pageData = DataParser(data);
     const thisPage = pageData[0].acf;
 
     return (

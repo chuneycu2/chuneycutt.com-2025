@@ -5,8 +5,8 @@ import About from "../4-molecules/About";
 import Accolades from "../4-molecules/Accolades";
 
 export default function SectionEntries(props) {
-    const content = props.content;
-    const type = content.acf_fc_layout.replace(/_/g, "-");
+    const { acf_fc_layout, entries } = props.content;
+    const type = acf_fc_layout.replace(/_/g, "-");
     //console.log(content);
 
     const entryTemplate = (content) => {
@@ -17,13 +17,13 @@ export default function SectionEntries(props) {
         if (type === 'accolades') return (<Accolades content={content} />)
     }
 
-    const entries = content.entries.map((entry) => (
+    const sectionEntries = entries.map((entry) => (
         <article key={entry.id} className={`section-entry ${type} `}>
             {entryTemplate(entry)}
         </article>
     ))
 
     return (
-        <>{entries}</>
+        <>{sectionEntries}</>
     )
 }

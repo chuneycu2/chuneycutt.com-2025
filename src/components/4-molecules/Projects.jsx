@@ -3,7 +3,7 @@ import ProjectLinks from "../5-atoms/ProjectLinks.jsx";
 
 
 export default function Projects(props) {
-    //console.log(props);
+    console.log(props);
     {/* add logic to fetch thumbnail images from media API? or do this at top level? */}
     return (
         <div className="entry-container">
