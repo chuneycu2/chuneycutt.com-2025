@@ -3,49 +3,27 @@ import SkillsAndTools from "../4-molecules/SkillsAndTools";
 import Projects from "../4-molecules/Projects";
 import About from "../4-molecules/About";
 import Accolades from "../4-molecules/Accolades";
-import ProjectLinks from "../5-atoms/ProjectLinks.jsx";
 
-export default function SectionEntries() {
-    {/* programmatically map through data to render each article */}
+export default function SectionEntries(props) {
+    const content = props.content;
+    const type = content.acf_fc_layout.replace(/_/g, "-");
+    console.log(content);
+
+    const entryTemplate = (content) => {
+        if (type === 'experience') return (<Experiences content={content} />)
+        if (type === 'skills-and-tools') return (<SkillsAndTools content={content} />)
+        if (type === 'projects') return (<Projects content={content} />)
+        if (type === 'about') return (<About content={content} />)
+        if (type === 'accolades') return (<Accolades content={content} />)
+    }
+
+    const entries = content.entries.map((entry) => (
+        <article className={`section-entry ${type}`}>
+            {entryTemplate(entry)}
+        </article>
+    ))
+
     return (
-        <>
-
-            {/*
-            programmatically determine which component to use for each entry
-            multiple articles listed so CSS can be built
-            */}
-            <article className="section-entry experience">
-                <Experiences/>
-            </article>
-            {/* place end-of-section links outside of articles */}
-            <aside>
-                <ProjectLinks/>
-            </aside>
-
-            <article className="section-entry skill-tool">
-                <SkillsAndTools/>
-            </article>
-            <aside>
-                <ProjectLinks/>
-            </aside>
-
-            <article className="section-entry project">
-                <Projects/>
-            </article>
-            <aside>
-                <ProjectLinks/>
-            </aside>
-
-            <article className="section-entry about">
-                <About/>
-            </article>
-            <aside>
-                <ProjectLinks/>
-            </aside>
-
-            <article className="section-entry accolade">
-                <Accolades/>
-            </article>
-        </>
+        <>{entries}</>
     )
 }

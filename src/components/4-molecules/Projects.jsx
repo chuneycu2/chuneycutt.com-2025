@@ -15,7 +15,7 @@ export default function Projects() {
                 </div>
                 <div className="project-info">
                     <p className="entry-description">As part of an acquisition by NetApp, the site was built on a dated codebase that was inflexible and poorly optimized. Before redesigning the front end, I set up a development pipeline and cleaned out the codebase.</p>
-                    <ProjectLinks/>
+                    {/*add links*/}
                 </div>
             </div>
         </div>

@@ -1,24 +1,30 @@
 @use '../../_variables.scss' as *;
 
 .project-links {
-    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0 1.25rem 0;
     position: relative;
     transition: .4s;
     .link {
         align-items: center;
         display: flex;
         position: relative;
-        svg {
-            transition: .4s;
+        a {
+            display: flex;
+            align-items: center;
+            svg {
+                transition: .4s;
+            }
         }
-        &.external {
+        &._blank {
             svg {
                 height: .75rem;
                 margin-right: .35rem;
                 width: .75rem;
             }
         }
-        &.internal {
+        &._self {
             svg {
                 height: .85rem;
                 margin-right: .25rem;

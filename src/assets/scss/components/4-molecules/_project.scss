@@ -2,7 +2,7 @@
 @use '../../base/mixins' as mixins;
 
 .section-entry {
-  &.project {
+  &.projects {
     // Leave space to style /projects tiles
     .entry-container {
       .project-thumbnail {
