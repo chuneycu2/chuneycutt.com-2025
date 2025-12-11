@@ -7,6 +7,7 @@
     position: relative;
     .entry-container {
       border: none;
+      margin-left: .5rem;
       padding-left: 1.25rem;
       h3 {
         padding-bottom: 1.25rem;
@@ -39,7 +40,7 @@
         transform: rotate(180deg);
         // Timeline (pseudo element so height can be adjusted)
         &:before {
-          background-color: transparent;
+          background-color: $gray;
           border-radius: unset;
           bottom: 0;
           content: '';
@@ -49,6 +50,13 @@
           position: absolute;
           transition: .4s;
           width: 2px;
+        }
+      }
+      @include mixins.media-breakpoint-up(sm) {
+        .accent-line {
+          &:before {
+            background-color: transparent;
+          }
         }
       }
       // Category icons

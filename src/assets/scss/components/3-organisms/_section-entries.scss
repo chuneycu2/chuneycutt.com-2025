@@ -1,6 +1,11 @@
 @use '../../variables' as *;
 @use '../../base/mixins' as mixins;
 
-.section-entry {
-
+.section-entries {
+  aside {
+    padding: 1rem 0;
+  }
+  & > .project-links {
+    padding: 0 0 3rem 0;
+  }
 }

@@ -18,6 +18,9 @@
             padding-bottom: 1rem;
         }
     }
+    &:last-child {
+        margin-bottom: 4rem;
+    }
 
     // Hover states and decorations (sm+ only)
     @include mixins.media-breakpoint-up(sm) {
@@ -28,7 +31,7 @@
             display: block;
             height: calc(100% + 2rem);
             opacity: 0;
-            left: -1.25rem;
+            left: -1rem;
             padding: 1rem;
             position: absolute;
             top: -1rem;

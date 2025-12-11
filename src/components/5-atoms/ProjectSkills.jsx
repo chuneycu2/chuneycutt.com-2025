@@ -1,11 +1,20 @@
-export default function ProjectSkills() {
+export default function ProjectSkills(props) {
+    const skills = props.skills;
+    const skillsMap = skills.map((skill) => {
+        if (skill.link !== "") {
+            return (
+                <div key={skills.id} className="skill">
+                    <a href={skill.link} target="_blank">{skill.skill}</a>
+                </div>
+            )
+        } else {
+            return <div key={skills.id} className="skill">{skill.skill}</div>
+        }
+    })
+
     return (
         <div className="project-skills d-flex">
-            <div className="skill">PHP</div>
-            <div className="skill linked"><a href="/">JavaScript</a></div>
-            <div className="skill">CSS/Sass</div>
-            <div className="skill">HTML</div>
-            <div className="skill">Git</div>
+            {skillsMap}
         </div>
     )
 }
