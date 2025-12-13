@@ -37,3 +37,5 @@
 @use 'components/5-atoms/project-links.scss';
 @use 'components/5-atoms/project-skills.scss';
 @use 'components/5-atoms/icons.scss';
+// Import overrides and UX support styles
+@use 'components/ux/_loading-element.scss';

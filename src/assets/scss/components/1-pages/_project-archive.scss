@@ -3,4 +3,104 @@
 
 .project-archive {
 
+  .section-title {
+    // back home link
+    .project-links {
+      padding: 0 !important;
+      svg.icon {
+        position: relative;
+        right: 0;
+        transform: rotate(180deg);
+        top: 0;
+      }
+    }
+  }
+
+  .project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    padding: 4rem 0;
+    @include mixins.media-breakpoint-up(sm) {
+      gap: 2rem;
+    }
+    .project-card {
+      flex: 1 1 100%;
+      position: relative;
+      @include mixins.media-breakpoint-up(sm) {
+        flex: 1 1 45%;
+      }
+      @include mixins.media-breakpoint-up(lg) {
+        flex: 1 1 30%;
+      }
+      .entry-container {
+        .card-image {
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          min-height: 200px;
+          position: relative;
+          width: 100%;
+          z-index: 1;
+          @include mixins.media-breakpoint-up(sm) {
+            min-height: 175px;
+          }
+          @include mixins.media-breakpoint-up(md) {
+            min-height: 200px;
+          }
+        }
+        .card-content {
+          padding-top: .75rem;
+          position: relative;
+          z-index: 1;
+          h3 {
+            font-size: 1rem;
+          }
+          .entry-subtitle {
+            padding-bottom: .25rem;
+          }
+        }
+        .project-skills {
+          gap: .5rem;
+          padding-top: .5rem;
+          .skill {
+            font-size: .75rem;
+            padding: .3rem .8rem .3rem .8rem;
+          }
+        }
+      }
+      &.section-entry {
+        margin-bottom: 2rem;
+        @include mixins.media-breakpoint-up(sm) {
+          margin-bottom: 1rem;
+        }
+
+        // arrow icon for project cards
+        svg {
+          height: 1.5rem;
+          position: absolute;
+          right: 1rem;
+          top: calc(200px + .5rem);
+          transition: .4s;
+          width: 1.5rem;
+          z-index: 1;
+          @include mixins.media-breakpoint-up(sm) {
+            top: calc(175px + .5rem);
+          }
+          @include mixins.media-breakpoint-up(md) {
+            top: calc(200px + .5rem);
+          }
+        }
+        &:hover,
+        &.active {
+          svg {
+            fill : $teal;
+            right: .5rem;
+            transition: .4s;
+          }
+        }
+        
+      }
+    }
+  }
 }

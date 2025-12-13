@@ -1,8 +1,42 @@
-export default function ProjectCard(props) {
-    console.log(props);
-    return (
-        <div className="project-card">
+import ProjectSkills from "../5-atoms/ProjectSkills";
+import IconSamePage from "../5-atoms/icons/IconSamePage";
+import { Link } from "react-router-dom";
 
-        </div>
+export default function ProjectCard(props) {
+    const { content, media } = props;
+
+    const cards = content.map((card) => {
+        // get the single entry within each ACF flexible content layout
+        const cardContent = card?.entries[0];
+
+        // set up link for card container
+        const cardLink = cardContent.links[0]?.link_url;
+
+        // get the image for the card
+        const projectImage = media?.filter((img) => {
+            if (img.id === cardContent?.project_image) {
+                return img;
+            }
+        });
+
+        return (
+            <article key={cardContent.id} className="project-card section-entry">
+                <Link to={cardLink} className="entry-container">
+                    <div className="card-image" style={{backgroundImage: `url('${projectImage[0].source_url}')`}}></div>
+                    <div className="card-content">
+                        {cardContent.project_title ? <h3>{cardContent.project_title}</h3> : ''}
+                        {cardContent.project_year ? <p className="entry-subtitle">{cardContent.project_year}</p> : ''}
+                        {cardContent.skills ? <ProjectSkills skills={cardContent.skills}/> : ''}
+                    </div>
+                    <IconSamePage />
+                </Link>
+            </article>
+        )
+    })
+
+    return (
+        <>
+            {cards}
+        </>
     )
 }
