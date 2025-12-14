@@ -9,7 +9,7 @@ export default function DataParser(data) {
     // location.pathname "/projects/*" maps to slugs 'projects/*' (see regex)
 
     const location = useLocation();
-    let projectMatch = '^/[^/]+/[^/]+[a-zA-Z0-9]$';
+    let projectMatch = '^\\/projects\\/.*';
     let projectPaths = location.pathname.split('/').filter(Boolean);
     let projectSlug = projectPaths.pop();
 

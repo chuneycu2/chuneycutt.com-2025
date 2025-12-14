@@ -12,20 +12,21 @@ export default async function DataAndMediaLoader() {
     // Use post data to fetch related media files
     async function fetchPostMedia(data) {
 
-        // reuses DataParser.js logic outside of React hook useLocation() context
+        // reuses DataParser.js logic outside of React hook context
         const location = window.location;
-        let projectMatch = '^/[^/]+/[^/]+[a-zA-Z0-9]$';
+        let projectMatch = '^\\/projects\\/.*';
         let projectPaths = location.pathname.split('/').filter(Boolean);
         let projectSlug = projectPaths.pop();
         let thisPage = '';
 
-        // filter page data based on location
+        // filter page data needed based on location
         if (location.pathname === '/')
             thisPage = data.filter(page => page.slug === 'home');
         if (location.pathname === '/projects')
             thisPage = data.filter(page => page.slug === 'projects');
         if (location.pathname.match(projectMatch))
             thisPage = data.filter(page => page.slug === projectSlug);
+
 
         // find out if Projects exists; if so, get their image IDs
         const components = thisPage[0].acf.components_react;
@@ -34,7 +35,7 @@ export default async function DataAndMediaLoader() {
         let imageIDs = [];
 
         // check for specific component types that contain images
-        components.forEach((component) => {
+        components?.forEach((component) => {
             if (component.acf_fc_layout === 'projects') {
                 projects = component.entries;
                 projects.map((project) => {

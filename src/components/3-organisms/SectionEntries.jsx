@@ -8,7 +8,7 @@ export default function SectionEntries(props) {
     const { acf_fc_layout, entries } = props.content;
     const media = props.media;
     const type = acf_fc_layout.replace(/_/g, "-");
-    //console.log(props);
+    //console.log(entries);
 
     const entryTemplate = (content) => {
         if (type === 'experience') return (<Experiences content={content} />)

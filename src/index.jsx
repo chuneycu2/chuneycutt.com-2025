@@ -25,13 +25,14 @@ const router = createBrowserRouter([
                 path: "projects",
                 Component: Projects,
                 loader: DataAndMediaLoader,
-                HydrateFallback: () => <div></div>,
+                HydrateFallback: LoadingElement,
             },
             {
                 path: "projects/:slug",
                 Component: Home,
                 loader: DataAndMediaLoader,
-                HydrateFallback: () => <div></div>,
+                HydrateFallback: LoadingElement,
+                //ErrorBoundary: () => <div>Error!</div>
             }
         ],
     },
