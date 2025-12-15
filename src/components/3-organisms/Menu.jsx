@@ -2,7 +2,6 @@ import { Link } from 'react-scroll';
 
 export default function Menu(props) {
 
-    // Assemble menu items from component sections present in the data
     const sections  = props.sections;
     const menuItems = sections?.map((sec) => (
         <li key={sec.section_title}>

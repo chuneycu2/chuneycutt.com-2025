@@ -1,0 +1,19 @@
+@use '../../variables' as *;
+@use '../../base/mixins' as mixins;
+
+// See section-entry for .content styles
+.section-entry {
+  &.overview-section {
+    &:after {
+      content: none
+    }
+    // Remove hover/active states
+    &:hover,
+    &.active {
+      cursor: inherit;
+      p, li {
+        color: $gray;
+      }
+    }
+  }
+}

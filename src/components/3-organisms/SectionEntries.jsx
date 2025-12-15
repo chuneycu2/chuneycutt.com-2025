@@ -14,7 +14,7 @@ export default function SectionEntries(props) {
         if (type === 'experience') return (<Experiences content={content} />)
         if (type === 'skills-and-tools') return (<SkillsAndTools content={content} />)
         if (type === 'projects') return (<Projects content={content} media={media} />)
-        if (type === 'about') return (<About content={props.content} />)
+        if (type === 'about' || type === 'overview-section') return (<About content={props.content} />)
         if (type === 'accolades') return (<Accolades content={content} media={media} />)
     }
 

@@ -2,10 +2,9 @@
 @use '../../base/mixins' as mixins;
 
 .menu-container {
-    padding-top: 4.5rem;
+    padding-top: 3rem;
     .menu {
         li {
-            transition: .4s;
             a {
                 align-items: center;
                 display: flex;

@@ -1,26 +1,45 @@
 @use '../../variables' as *;
 @use '../../base/mixins' as mixins;
 
+// All project overview pages
 .title-container {
     h1 {
-        padding-bottom: .75rem;
+
     }
     h2 {
-        padding-bottom: 2rem;
+
     }
     .intro {
-        font-size: 1rem;
+
     }
     &.section {
-        padding-bottom: 3rem;
+
+    }
+}
+
+// Home-specific styling
+.home {
+    .title-container {
+        h1 {
+            padding-bottom: .75rem;
+        }
         h2 {
-            padding-bottom: 0;
+            padding-bottom: 2rem;
         }
-        &.About {
-            padding-bottom: 1.5rem;
+        .intro {
+            font-size: 1rem;
         }
-        .section-intro {
-            padding-top: 1rem;
+        &.section {
+            padding-bottom: 3rem;
+            h2 {
+                padding-bottom: 0;
+            }
+            &.About {
+                padding-bottom: 1.5rem;
+            }
+            .section-intro {
+                padding-top: 1rem;
+            }
         }
     }
 }

@@ -110,9 +110,10 @@ ul {
   text-transform: uppercase;
 }
 
+// Project pages menu
 ul.menu {
   color: $gray;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: $regular;
   list-style: none;
   padding: 0;
@@ -123,3 +124,4 @@ ul.menu {
     }
   }
 }
+
