@@ -1,6 +1,11 @@
-import { Link } from 'react-scroll';
+import { Link, scrollSpy } from 'react-scroll';
+import { useEffect } from 'react';
 
 export default function Menu(props) {
+
+    useEffect(() => {
+        scrollSpy.update();
+    }, []); // Empty dependency array ensures it runs once on mount
 
     const sections  = props.sections;
     const menuItems = sections?.map((sec) => (
@@ -13,7 +18,7 @@ export default function Menu(props) {
                 smooth={true}
                 duration={500}
                 offset={-40}
-                spyThrottle={200}>
+                spyThrottle={0}>
                 {sec.section_title}
             </Link>
         </li>
