@@ -1,5 +1,4 @@
 import { useLoaderData } from "react-router";
-import { useRef, useEffect } from 'react';
 
 import Sidebar from "../2-templates/Sidebar.jsx";
 import Content from "../2-templates/Content.jsx";
@@ -7,16 +6,11 @@ import DataParser from "../data/DataParser.js";
 import Footnote from "../3-organisms/Footnotes.jsx";
 
 export default function Home() {
-    const ref = useRef();
-    useEffect(() => {
-        console.log('ref', ref.current);
-    }, []);
 
     // Fetch page and media data
     const data = useLoaderData();
     const pageData = DataParser(data[0].posts);
     const slug = pageData[0].slug;
-    console.log(slug);
     const mediaData = data[0]?.media;
     const thisPage = pageData[0].acf;
 
