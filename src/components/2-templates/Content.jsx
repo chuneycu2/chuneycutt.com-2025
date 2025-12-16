@@ -1,7 +1,6 @@
 import { Element } from 'react-scroll';
 import { InView } from 'react-intersection-observer'
 
-import SectionTitles from "./SectionTitles";
 import SectionEntries from "../3-organisms/SectionEntries"
 import ProjectLinks from "../5-atoms/ProjectLinks";
 
@@ -10,6 +9,7 @@ export default function Content(props) {
 
     const sections = content.map((sec) => {
         const title = sec.section_title;
+        const intro = sec.section_intro;
         const id = sec.section_title.replace(/\s/g, "");
         return (
             <InView
@@ -20,9 +20,12 @@ export default function Content(props) {
                 {({ref, inView}) => (
                     <section id={id} ref={ref} className={inView ? 'active' : 'inactive'}>
                         <Element type={"react-scroll-element"} name={sec.section_title.replace(/\s/g, '')}>
-                            <SectionTitles title={sec.section_title} intro={sec.section_intro}/>
+                            <div className={`title-container section ${title.replace(/\s/g, '')} ${inView ? "active" : "inactive"}`}>
+                                {title && <h2>{title}</h2>}
+                                {intro && <p className="section-intro">{intro}</p>}
+                            </div>
                             <div className="section-entries">
-                                <SectionEntries content={sec} media={media} key={title} />
+                                <SectionEntries content={sec} media={media} key={title}/>
                                 {sec.links && <ProjectLinks links={sec.links}/>}
                             </div>
                         </Element>

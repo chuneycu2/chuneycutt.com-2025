@@ -2,10 +2,11 @@
 @use '../../base/mixins' as mixins;
 
 .section-entries {
+  margin-bottom: 3rem;
   aside {
     padding: 1rem 0;
   }
   & > .project-links {
-    padding: 0 0 3rem 0;
+    padding: 0;
   }
 }

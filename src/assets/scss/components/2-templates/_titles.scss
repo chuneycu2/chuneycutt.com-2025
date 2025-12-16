@@ -15,6 +15,14 @@
     &.section {
 
     }
+    &.active {
+        h2 {
+            color: $teal;
+        }
+        .section-intro {
+            color: $white;
+        }
+    }
 }
 
 // Home-specific styling

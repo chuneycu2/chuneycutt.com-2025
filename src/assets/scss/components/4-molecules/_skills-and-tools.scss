@@ -71,41 +71,5 @@
         width: 1.25rem;
       }
     }
-    @include mixins.media-breakpoint-up(sm) {
-      &:hover,
-      &.active {
-        .entry-container {
-          position: relative;
-          .accent-line {
-            &:before {
-              background-color: $teal;
-              transition: .25s;
-            }
-          }
-          svg.top-icon {
-            fill: $teal;
-            transition: .4s;
-          }
-          .skills-container {
-            @include mixins.media-breakpoint-up(sm) {
-              left: 0;
-              transition: .4s;
-            }
-          }
-        }
-      }
-    }
-  }
-  // Keep accolades line always gray unless active
-  @include mixins.media-breakpoint-up(md) {
-    &.accolades {
-      .entry-container {
-        .accent-line {
-          &:before {
-            background-color: $gray;
-          }
-        }
-      }
-    }
   }
 }

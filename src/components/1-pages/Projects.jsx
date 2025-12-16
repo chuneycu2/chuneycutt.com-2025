@@ -32,7 +32,7 @@ export default function Projects() {
                     </div>
                 }
             </section>
-            <section className="project-cards row px-0 m-0">
+            <section className="project-cards section-entries row px-0 mx-0">
                 <ProjectCard content={thisPage.components_react} media={mediaData} />
             </section>
         </div>

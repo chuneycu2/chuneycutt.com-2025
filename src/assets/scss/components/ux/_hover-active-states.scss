@@ -1,0 +1,206 @@
+@use '../../variables' as *;
+@use '../../base/mixins' as mixins;
+
+.section-entries {
+  transition: .4s;
+  &:hover {
+    transition: .4s;
+    .section-entry:not(.about) {
+      opacity: .45;
+      transition: .4s;
+    }
+  }
+
+  .section-entry {
+
+    // Faded background lightbox
+    &:after {
+      background-color: transparent;
+      content: '';
+      display: block;
+      height: calc(100% + 2rem);
+      opacity: 0;
+      left: -1rem;
+      padding: 1rem;
+      position: absolute;
+      top: -1rem;
+      transition: .4s;
+      width: calc(100% + 2rem);
+      z-index: 0;
+    }
+    &:hover:not(.about) {
+      opacity: 1;
+      transition: .4s;
+      h3 {
+        color: $teal;
+      }
+      p, li {
+        color: $white;
+        transition: .4s;
+      }
+      a {
+        cursor: pointer;
+        color: $white;
+        svg {
+          fill: $white;
+        }
+        &:hover {
+          color: $teal;
+          svg {
+            fill: $teal;
+          }
+        }
+      }
+      .skill {
+        border: 1px solid $teal;
+        color: $teal;
+        transition: .4s;
+        a {
+          color: $teal;
+        }
+      }
+    }
+
+    &.experience {
+      &:hover {
+        .entry-container {
+          border-left: 2px solid $teal;
+          transition: .4s;
+          &:before {
+            background-color: $teal;
+            transition: .4s;
+          }
+        }
+      }
+      &:hover {
+        transition: .4s;
+        &:after {
+          background-color: $gray;
+          opacity: .15;
+          transition: .4s;
+        }
+      }
+    }
+
+    &.projects,
+    &.project-card {
+      &:hover {
+        transition: .4s;
+        .entry-container {
+          .project-thumbnail {
+            img {
+              border: 2px solid $teal;
+              transition: .4s;
+            }
+          }
+        }
+        &:after {
+          background-color: $gray;
+          opacity: .15;
+          transition: .4s;
+        }
+      }
+    }
+
+    &.skills-and-tools {
+      &:hover {
+        .bio-card {
+          img {
+            border: 2px solid $teal;
+            transition: .4s;
+          }
+        }
+        .entry-container {
+          position: relative;
+          .accent-line {
+            &:before {
+              background-color: $teal;
+              transition: .25s;
+            }
+          }
+          svg.top-icon {
+            fill: $teal;
+            transition: .4s;
+          }
+          blockquote {
+            color: $white;
+            transition: .4s;
+          }
+          .skills-container {
+            @include mixins.media-breakpoint-up(sm) {
+              left: 0;
+              transition: .4s;
+            }
+          }
+        }
+        &:after {
+          background-color: unset;
+        }
+      }
+    }
+
+    &.about {
+      &.active {
+        .bio-card {
+          img {
+            border: 2px solid $teal;
+            transition: .4s;
+          }
+          h3 {
+            color: $teal;
+          }
+          .entry-subtitle {
+            color: $white;
+          }
+          a {
+            color: $white;
+            svg {
+              fill: $white;
+            }
+            &:hover {
+              color: $teal;
+              svg {
+                fill: $teal;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.accolades {
+      &:hover {
+        .bio-card {
+          img {
+            border: 2px solid $teal;
+            transition: .4s;
+          }
+        }
+        .entry-container {
+          position: relative;
+          .accent-line {
+            &:before {
+              background-color: $teal;
+              transition: .25s;
+            }
+          }
+          svg.top-icon {
+            fill: $teal;
+            transition: .4s;
+          }
+          blockquote {
+            color: $white;
+            transition: .4s;
+          }
+        }
+        &:after {
+          background-color: unset;
+        }
+      }
+    }
+  }
+}
+
+.project-archive {
+
+}

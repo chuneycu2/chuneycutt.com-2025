@@ -3,6 +3,7 @@
 
 .section-entry {
     margin-bottom: 2.5rem;
+    opacity: 1;
     position: relative;
     transition: .4s;
     .entry-container {
@@ -22,7 +23,7 @@
         margin-bottom: 4rem;
     }
 
-    // Faded background tile (experience, skills & tools, projects)
+    /*// Faded background tile (experience, skills & tools, projects)
     &:after {
         background-color: transparent;
         content: '';
@@ -40,6 +41,7 @@
     &:hover,
     &.active {
         cursor: pointer;
+        opacity: 1;
         transition: .4s;
         h3 {
             color: $teal;
@@ -47,6 +49,12 @@
         p, li {
             color: $white;
             transition: .4s;
+        }
+        svg {
+            fill: $teal;
+        }
+        a {
+            color: $teal;
         }
         .skill {
             border: 1px solid $teal;
@@ -57,11 +65,12 @@
             }
         }
     }
+    // only show background lightbox on hover
     &:hover {
         &:after {
             background-color: $gray;
             opacity: .15;
             transition: .4s;
         }
-    }
+    }*/
 }

@@ -5,6 +5,13 @@
 .section-entry {
   &.about,
   &.accolades {
+    .entry-container {
+      .accent-line {
+        &:before {
+          background-color: $gray;
+        }
+      }
+    }
     .bio-card {
       position: relative;
       z-index: 2;
@@ -27,22 +34,6 @@
       .project-links {
         padding: 0;
         font-size: .85rem;
-      }
-    }
-    @include mixins.media-breakpoint-up(sm) {
-      &:hover,
-      &.active {
-        blockquote {
-          color: $white;
-          transition: .4s;
-        }
-        img {
-          border: 2px solid $teal;
-          transition: .4s;
-        }
-        &:after {
-          background-color: unset;
-        }
       }
     }
   }
