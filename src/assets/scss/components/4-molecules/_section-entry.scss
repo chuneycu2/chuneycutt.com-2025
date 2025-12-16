@@ -20,57 +20,6 @@
         }
     }
     &:last-child {
-        margin-bottom: 4rem;
+        margin-bottom: 1rem;
     }
-
-    /*// Faded background tile (experience, skills & tools, projects)
-    &:after {
-        background-color: transparent;
-        content: '';
-        display: block;
-        height: calc(100% + 2rem);
-        opacity: 0;
-        left: -1rem;
-        padding: 1rem;
-        position: absolute;
-        top: -1rem;
-        transition: .4s;
-        width: calc(100% + 2rem);
-        z-index: 0;
-    }
-    &:hover,
-    &.active {
-        cursor: pointer;
-        opacity: 1;
-        transition: .4s;
-        h3 {
-            color: $teal;
-        }
-        p, li {
-            color: $white;
-            transition: .4s;
-        }
-        svg {
-            fill: $teal;
-        }
-        a {
-            color: $teal;
-        }
-        .skill {
-            border: 1px solid $teal;
-            color: $teal;
-            transition: .4s;
-            a {
-                color: $teal;
-            }
-        }
-    }
-    // only show background lightbox on hover
-    &:hover {
-        &:after {
-            background-color: $gray;
-            opacity: .15;
-            transition: .4s;
-        }
-    }*/
 }

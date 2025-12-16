@@ -2,11 +2,26 @@
 @use '../../base/mixins' as mixins;
 
 .section-entries {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   aside {
     padding: 1rem 0;
   }
-  & > .project-links {
-    padding: 0;
+}
+.section-link {
+  .project-links {
+    font-size: 1.1rem;
+    a {
+      cursor: pointer;
+      color: $white;
+      svg {
+        fill: $white;
+      }
+      &:hover {
+        color: $teal;
+        svg {
+          fill: $teal;
+        }
+      }
+    }
   }
 }

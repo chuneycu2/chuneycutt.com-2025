@@ -26,8 +26,8 @@ export default function Content(props) {
                             </div>
                             <div className="section-entries">
                                 <SectionEntries content={sec} media={media} key={title}/>
-                                {sec.links && <ProjectLinks links={sec.links}/>}
                             </div>
+                            {sec.links && <div className="section-link"><ProjectLinks links={sec.links}/></div>}
                         </Element>
                     </section>
                 )}

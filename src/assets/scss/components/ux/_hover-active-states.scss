@@ -5,7 +5,7 @@
   transition: .4s;
   &:hover {
     transition: .4s;
-    .section-entry:not(.about) {
+    .section-entry:not(.about):not(.skills-and-tools) {
       opacity: .45;
       transition: .4s;
     }
@@ -16,6 +16,8 @@
     // Faded background lightbox
     &:after {
       background-color: transparent;
+      border-radius: .25rem;
+      border-top: 1px solid $white;
       content: '';
       display: block;
       height: calc(100% + 2rem);
@@ -28,7 +30,7 @@
       width: calc(100% + 2rem);
       z-index: 0;
     }
-    &:hover:not(.about) {
+    &:hover:not(.about):not(.skills-and-tools) {
       opacity: 1;
       transition: .4s;
       h3 {
@@ -103,7 +105,7 @@
     }
 
     &.skills-and-tools {
-      &:hover {
+      &.active {
         .bio-card {
           img {
             border: 2px solid $teal;
@@ -130,6 +132,14 @@
             @include mixins.media-breakpoint-up(sm) {
               left: 0;
               transition: .4s;
+            }
+            .skill {
+              border: 1px solid $teal;
+              color: $teal;
+              transition: .4s;
+              a {
+                color: $teal;
+              }
             }
           }
         }

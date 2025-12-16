@@ -12,8 +12,8 @@
     .intro {
 
     }
-    &.section {
-
+    .project-links {
+        padding-bottom: 0;
     }
     &.active {
         h2 {
@@ -21,6 +21,19 @@
         }
         .section-intro {
             color: $white;
+        }
+        a {
+            cursor: pointer;
+            color: $white;
+            svg {
+                fill: $white;
+            }
+            &:hover {
+                color: $teal;
+                svg {
+                    fill: $teal;
+                }
+            }
         }
     }
 }
