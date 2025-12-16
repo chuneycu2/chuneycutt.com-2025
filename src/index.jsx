@@ -31,7 +31,6 @@ const router = createBrowserRouter([
                 Component: Home,
                 loader: DataAndMediaLoader,
                 HydrateFallback: LoadingElement,
-                //ErrorBoundary: () => <div>Error!</div>
             }
         ],
     },
