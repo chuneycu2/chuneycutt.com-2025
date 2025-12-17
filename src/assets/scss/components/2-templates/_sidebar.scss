@@ -2,10 +2,17 @@
 @use '../../base/mixins' as mixins;
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
   @include mixins.media-breakpoint-up(md) {
     height: 100%;
+    padding-right: 3rem;
     position: sticky;
     top: 2.25rem;
+  }
+  @include mixins.media-breakpoint-up(lg) {
+    padding-right: 4rem;
   }
   &.mobile-active {
     position: relative;

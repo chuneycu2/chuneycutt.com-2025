@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ProjectLinks from "../5-atoms/ProjectLinks.jsx";
+import ProjectSkills from "../5-atoms/ProjectSkills";
 
 
 export default function Projects(props) {
@@ -21,7 +21,7 @@ export default function Projects(props) {
                         <h3>{content.project_title}</h3>
                         <p className="entry-subtitle">{content.project_company}</p>
                         <p className="entry-description">{content.project_intro}</p>
-                        {/*<ProjectLinks links={content.links}/>*/}
+                        <ProjectSkills skills={content.skills}/>
                     </div>
                 </div>
             </Link>

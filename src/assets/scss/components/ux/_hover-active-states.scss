@@ -5,7 +5,7 @@
   transition: .4s;
   &:hover {
     transition: .4s;
-    .section-entry:not(.about):not(.skills-and-tools) {
+    .section-entry:not(.about):not(.skills-and-tools):not(.accolades) {
       opacity: .45;
       transition: .4s;
     }
@@ -30,7 +30,7 @@
       width: calc(100% + 2rem);
       z-index: 0;
     }
-    &:hover:not(.about):not(.skills-and-tools) {
+    &:hover:not(.about):not(.skills-and-tools):not(.accolades) {
       opacity: 1;
       transition: .4s;
       h3 {
@@ -179,33 +179,41 @@
     }
 
     &.accolades {
-      &:hover {
-        .bio-card {
-          img {
-            border: 2px solid $teal;
-            transition: .4s;
+    }
+  }
+}
+
+#Accolades {
+  &.active {
+    .accolades {
+      .bio-card {
+        img {
+          border: 2px solid $teal;
+          transition: .4s;
+        }
+        .entry-subtitle {
+          color: $white;
+        }
+      }
+      .entry-container {
+        position: relative;
+        .accent-line {
+          &:before {
+            background-color: $teal;
+            transition: .25s;
           }
         }
-        .entry-container {
-          position: relative;
-          .accent-line {
-            &:before {
-              background-color: $teal;
-              transition: .25s;
-            }
-          }
-          svg.top-icon {
-            fill: $teal;
-            transition: .4s;
-          }
-          blockquote {
-            color: $white;
-            transition: .4s;
-          }
+        svg.top-icon {
+          fill: $teal;
+          transition: .4s;
         }
-        &:after {
-          background-color: unset;
+        blockquote {
+          color: $white;
+          transition: .4s;
         }
+      }
+      &:after {
+        background-color: unset;
       }
     }
   }

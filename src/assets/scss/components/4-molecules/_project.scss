@@ -26,23 +26,13 @@
           display: block;
           flex: 1 1 auto;
         }
+        .entry-description {
+          padding-bottom: 1rem;
+        }
       }
       .project-links {
         padding: .75rem 0 0 0;
       }
-    }
-    @include mixins.media-breakpoint-up(sm) {
-      /*&:hover,
-      &.active {
-        .entry-container {
-          .project-thumbnail {
-            img {
-              border: 2px solid $teal;
-              transition: .4s;
-            }
-          }
-        }
-      }*/
     }
   }
 }
