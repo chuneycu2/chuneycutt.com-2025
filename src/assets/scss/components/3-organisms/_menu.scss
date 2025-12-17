@@ -54,7 +54,7 @@
         height: 100%;
         position: absolute;
         width: 45px;
-        z-index: 0;
+        z-index: -1;
     }
     &:before {
         left: -2.25rem;
