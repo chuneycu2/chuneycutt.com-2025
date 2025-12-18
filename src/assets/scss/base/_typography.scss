@@ -37,6 +37,7 @@ p, .p {
   color: $gray;
   font-size: 1rem;
   font-weight: $light;
+  line-height: 1.5;
   margin: 0;
   transition: .4s;
 }
@@ -56,6 +57,10 @@ a, .a {
 
 blockquote {
   color: $gray;
+  font-family: $headline;
+  font-size: 18px;
+  font-weight: $xlight;
+  line-height: 1.5;
   transition: .4s;
 }
 

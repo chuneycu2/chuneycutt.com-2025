@@ -27,7 +27,11 @@
           flex: 1 1 auto;
         }
         .entry-description {
+          font-size: 1rem;
           padding-bottom: 1rem;
+          @include mixins.media-breakpoint-up(md) {
+            font-size: .85rem;
+          }
         }
       }
       .project-links {

@@ -16,8 +16,9 @@
         display: flex;
         position: relative;
         a {
-            display: flex;
             align-items: center;
+            display: flex;
+            font-size: .875rem;
             svg {
                 transition: .4s;
             }

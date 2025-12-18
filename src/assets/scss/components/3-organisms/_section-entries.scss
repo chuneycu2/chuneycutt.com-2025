@@ -10,16 +10,19 @@
 .section-link {
   .project-links {
     font-size: 1.1rem;
-    a {
-      cursor: pointer;
-      color: $white;
-      svg {
-        fill: $white;
-      }
-      &:hover {
-        color: $teal;
+    .link {
+      a {
+        cursor: pointer;
+        color: $white;
+        font-size: 1rem;
         svg {
-          fill: $teal;
+          fill: $white;
+        }
+        &:hover {
+          color: $teal;
+          svg {
+            fill: $teal;
+          }
         }
       }
     }
