@@ -6,7 +6,6 @@ import CyrusPic from "../../assets/img/cyrus-pic.jpg";
 
 export default function About(props) {
     const content = props.content;
-    //console.log(content);
 
     // Get the WYSIWYG content and sanitize it for good measure
     const editorContent = content.entries?.map((entry) => (
@@ -29,8 +28,7 @@ export default function About(props) {
     return (
         <div className="entry-container">
             {bioCard && bioCard}
-            <div className="section-content" dangerouslySetInnerHTML={{__html: cleanHTML}}>
-            </div>
+            <div className="section-content" dangerouslySetInnerHTML={{__html: cleanHTML}}></div>
         </div>
     )
 }

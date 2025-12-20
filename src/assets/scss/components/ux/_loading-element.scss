@@ -4,8 +4,10 @@
   height: 100vh;
   justify-content: center;
   position: absolute;
+  transition: .4s;
   width: 100%;
   .loading-screen {
+    opacity: .5;
     transition: .4s;
   }
 }

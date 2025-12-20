@@ -1,7 +1,9 @@
+import loader from '../../assets/img/gradient-loader.webp';
+
 export default function LoadingElement() {
     return (
         <div className="loading">
-            <div className="loading-screen"><h2>Loading...</h2></div>
+            <img className="loading-screen" src={loader} width="100" />
         </div>
     )
 }

@@ -20,8 +20,8 @@ export default function Titles(props) {
         <>
             <div className="title-container">
                 {/* programmatically add title info based on page URL */}
-                <h1>{props.name}</h1>
-                <h2>{props.title}</h2>
+                {props.name && <h1>{props.name}</h1>}
+                {props.title && <h2>{props.title}</h2>}
                 {props.slug !== 'home' && <ProjectLinks links={links} />}
                 <p className="intro">
                     {props.intro}

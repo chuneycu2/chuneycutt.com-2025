@@ -10,7 +10,7 @@ export default function ProjectLinks(props) {
     }
 
     const linkItems = links.map(link => (
-        <div key={link.link_text} className={`${link.link_target} link`}>
+        <div key={link.link_text} className={`${link.link_target} link ${link.classname}`}>
             <a className="pr-3" href={link.link_url} target={link.link_target}>
                 {getIcon(link.link_target)}
                 {link.link_text}

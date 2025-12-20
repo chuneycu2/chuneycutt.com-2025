@@ -12,13 +12,13 @@ import Content from "../2-templates/Content";
 export default function Home() {
     const [isActive, setActive] = useState(null);
 
-    // Fetch page and media data
+    // Fetch page and media data if state is empty
     const data = useLoaderData();
     const pageData = DataParser(data[0].posts);
     const slug = pageData[0].slug;
     const mediaData = data[0]?.media;
     const thisPage = pageData[0].acf;
-    console.log(thisPage);
+    const { linkedin, github, email } = thisPage.social_links;
 
     // Set page title
     useEffect(() => {
@@ -39,12 +39,12 @@ export default function Home() {
                         className={`sidebar ${slug} col-12 col-md-5`}>
                         <Titles name={thisPage.name} title={thisPage.title} intro={thisPage.intro} slug={slug} link={thisPage.project_link} />
                         <Menu sections={thisPage.components_react} isActive={isActive} />
-                        <SocialLinks links={thisPage.social_links} />
+                        {linkedin && <SocialLinks links={thisPage.social_links} />}
                     </section>
                 )}
             </InView>
 
-            <Content content={thisPage?.components_react} media={mediaData ? mediaData : ''} isActive={isActive} footnotes={thisPage?.footnotes} />
+            <Content content={thisPage?.components_react} media={mediaData ? mediaData : ''} isActive={isActive} slug={slug} footnotes={thisPage?.footnotes} />
             {/*<Footnote footnotes={thisPage?.footnotes}/>*/}
         </div>
     )

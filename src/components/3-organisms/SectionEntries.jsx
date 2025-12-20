@@ -5,6 +5,8 @@ import SkillsAndTools from "../4-molecules/SkillsAndTools";
 import Projects from "../4-molecules/Projects";
 import About from "../4-molecules/About";
 import Accolades from "../4-molecules/Accolades";
+import ProjectLinks from "../5-atoms/ProjectLinks.jsx";
+import React from "react";
 
 export default function SectionEntries(props) {
     const { acf_fc_layout, entries } = props.content;

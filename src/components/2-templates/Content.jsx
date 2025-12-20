@@ -6,7 +6,7 @@ import ProjectLinks from "../5-atoms/ProjectLinks";
 import Footnote from "../3-organisms/Footnotes.jsx";
 
 export default function Content(props) {
-    const { content, media, isActive, footnotes } = props;
+    const { content, media, isActive, footnotes, slug } = props;
 
     const sections = Object.values(content)?.map((sec) => {
         const title = sec.section_title;
@@ -42,6 +42,14 @@ export default function Content(props) {
     return (
         <section id="content" className={`content col-12 col-md-7 px-0`}>
             {sections}
+            {slug !== 'home' && <ProjectLinks links={[
+                {
+                    link_text : "Back to Project Archive",
+                    link_url : "/projects",
+                    link_target : "_self",
+                    classname : "project-archive"
+                }
+            ]} />}
             <Footnote footnotes={footnotes}/>
         </section>
     )

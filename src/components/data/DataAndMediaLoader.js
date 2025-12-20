@@ -71,6 +71,8 @@ export default async function DataAndMediaLoader() {
 
     // Await fetch results from posts, then media in sequence
     async function fetchPostsAndMedia() {
+        // check state before rendering
+
         const posts = await fetch(domain + postsEndpoint);
         const postData = await posts.json();
         const mediaData = await fetchPostMedia(postData);
