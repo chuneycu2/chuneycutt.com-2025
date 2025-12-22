@@ -57,9 +57,9 @@ a, .a {
 
 blockquote {
   color: $gray;
-  font-family: $headline;
-  font-size: 18px;
-  font-weight: $xlight;
+  font-family: $body;
+  font-size: 1rem;
+  font-weight: $light;
   line-height: 1.5;
   transition: .4s;
 }

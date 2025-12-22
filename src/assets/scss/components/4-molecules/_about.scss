@@ -26,9 +26,10 @@
       h3 {
         font-family: $headline;
         font-weight: $xlight;
-        padding-bottom: .25rem;
+        //padding-bottom: .25rem;
       }
       .entry-subtitle {
+        font-size: .85rem;
         padding-bottom: .5rem;
       }
       .project-links {

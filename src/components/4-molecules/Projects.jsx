@@ -18,10 +18,10 @@ export default function Projects(props) {
                         <img src={media && projectImage[0].source_url} alt={media && projectImage[0].alt_text}/>
                     </div>
                     <div className="project-info col-12 col-sm-9 px-0">
-                        <h3>{content.project_title}</h3>
-                        <p className="entry-subtitle">{content.project_company}</p>
-                        <p className="entry-description">{content.project_intro}</p>
-                        <ProjectSkills skills={content.skills}/>
+                        {content.project_title && <h3>{content.project_title}</h3>}
+                        {content.project_company && <p className="entry-subtitle">{content.project_company}</p>}
+                        {content.project_intro && <p className="entry-description">{content.project_intro}</p>}
+                        {content.skills && <ProjectSkills skills={content.skills}/>}
                     </div>
                 </div>
             </Link>
