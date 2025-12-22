@@ -22,7 +22,7 @@ export default function ProjectCard(props) {
         return (
             <article key={cardContent.id} className="project-card section-entry">
                 <Link to={cardLink} className="entry-container">
-                    <div className="card-image" style={{backgroundImage: `url('${projectImage[0].source_url}')`}}></div>
+                    <div className="card-image" style={{backgroundImage: `url('${projectImage[0]?.source_url}')`}}></div>
                     <div className="card-content">
                         {cardContent.project_title ? <h3>{cardContent.project_title}</h3> : ''}
                         {cardContent.project_year ? <p className="entry-subtitle">{cardContent.project_year}</p> : ''}

@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react';
-import { useLoaderData } from "react-router";
+import { useEffect } from 'react';
+import { useRouteLoaderData } from "react-router";
 import DataParser from "../data/DataParser.js";
 
 import ProjectCard from "../4-molecules/ProjectCard";
@@ -8,7 +8,7 @@ import ProjectLinks from "../5-atoms/ProjectLinks";
 export default function Projects() {
 
     // Fetch page and media data
-    const data = useLoaderData();
+    const data = useRouteLoaderData('root-data');
     const pageData = DataParser(data[0].posts);
     const mediaData = data[0].media;
     const thisPage = pageData[0].acf;
