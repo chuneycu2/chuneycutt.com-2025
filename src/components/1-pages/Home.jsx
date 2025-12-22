@@ -1,9 +1,8 @@
-import { useRouteLoaderData, Outlet } from "react-router";
+import { useEffect, useState } from "react";
+import { useRouteLoaderData } from "react-router";
 import { InView } from 'react-intersection-observer'
-import React, { useEffect, useState } from "react";
 
 import DataParser from "../data/DataParser";
-
 import Titles from "../2-templates/Titles";
 import Menu from "../3-organisms/Menu";
 import SocialLinks from "../5-atoms/SocialLinks";
@@ -18,7 +17,7 @@ export default function Home() {
     const slug = pageData[0].slug;
     const mediaData = data[0]?.media;
     const thisPage = pageData[0].acf;
-    const { linkedin, github, email } = thisPage.social_links;
+    const { linkedin } = thisPage.social_links;
 
     // Set page title
     useEffect(() => {

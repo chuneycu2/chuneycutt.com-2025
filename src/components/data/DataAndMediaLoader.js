@@ -40,7 +40,7 @@ export default async function DataAndMediaLoader() {
         // fetch data for each imageID sequentially and then return the responses together
         const fetchMedia = async (ids) => {
             try {
-                const fetchPromises = ids.map(id => fetch(domain + mediaEndpoint + id + '?time=' + timestamp));
+                const fetchPromises = ids.map(id => fetch(domain + mediaEndpoint + id));
                 const responses = await Promise.all(fetchPromises);
                 // convert all responses to JSON (another set of promises)
                 const data = await Promise.all(responses.map(res => {
@@ -58,7 +58,7 @@ export default async function DataAndMediaLoader() {
 
     // await fetch results from posts, then media in sequence
     async function fetchPostsAndMedia() {
-        const posts = await fetch(domain + postsEndpoint);
+        const posts = await fetch(domain + postsEndpoint + '?time=' + timestamp + '&per_page=100');
         const postData = await posts.json();
         const mediaData = await fetchPostMedia(postData);
 

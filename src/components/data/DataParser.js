@@ -4,9 +4,6 @@ import { useLocation } from 'react-router-dom';
  * Parses incoming page data and returns all relevant objects for the current page URL
  */
 export default function DataParser(data) {
-    // location.pathname "/" maps to slug 'home'
-    // location.pathname "/projects" maps to slug 'projects'
-    // location.pathname "/projects/*" maps to slugs 'projects/*' (see regex)
 
     const location = useLocation();
     let projectMatch = '^\\/projects\\/.*';
