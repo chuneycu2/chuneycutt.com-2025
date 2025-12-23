@@ -1,4 +1,4 @@
-import IconEmail from "./icons/iconEmail";
+import IconEmail from "./icons/IconEmail";
 import IconGitHub from "./icons/IconGitHub";
 import IconLinkedIn from "./icons/IconLinkedIn";
 
