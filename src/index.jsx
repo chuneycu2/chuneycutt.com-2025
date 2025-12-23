@@ -15,21 +15,19 @@ const router = createBrowserRouter([
         element: <App/>,
         loader: DataAndMediaLoader,
         id: "root-data",
+        HydrateFallback: LoadingElement,
         children: [
             {
                 index: true,
                 Component: Home,
-                HydrateFallback: LoadingElement,
             },
             {
                 path: "projects",
                 Component: Projects,
-                HydrateFallback: LoadingElement,
             },
             {
                 path: "projects/:slug",
                 Component: Home,
-                HydrateFallback: LoadingElement,
             }
         ],
     },
