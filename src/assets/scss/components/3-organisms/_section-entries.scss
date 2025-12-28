@@ -1,30 +1,30 @@
-@use '../../variables' as *;
-@use '../../base/mixins' as mixins;
+@use "../../variables" as *;
+@use "../../base/mixins" as mixins;
 
 .section-entries {
-  margin-bottom: 0;
-  aside {
-    padding: 1rem 0;
-  }
+	margin-bottom: 0;
+	aside {
+		padding: 1rem 0;
+	}
 }
 .section-link {
-  .project-links {
-    font-size: 1.1rem;
-    .link {
-      a {
-        cursor: pointer;
-        color: $white;
-        font-size: 1rem;
-        svg {
-          fill: $white;
-        }
-        &:hover {
-          color: $teal;
-          svg {
-            fill: $teal;
-          }
-        }
-      }
-    }
-  }
+	.project-links {
+		font-size: 1.1rem;
+		.link {
+			a {
+				cursor: pointer;
+				color: $teal;
+				font-size: 1rem;
+				svg {
+					fill: $teal;
+				}
+				&:hover {
+					color: $white;
+					svg {
+						fill: $white;
+					}
+				}
+			}
+		}
+	}
 }
