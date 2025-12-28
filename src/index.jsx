@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { createBrowserRouter } from "react-router";
+import ReactGA from "reactGA4";
 import DataAndMediaLoader from "./components/data/DataAndMediaLoader.js";
 
 import App from "./App";
@@ -9,6 +10,9 @@ import Home from "./components/1-pages/Home";
 import Projects from "./components/1-pages/Projects";
 import LoadingElement from "./components/ux/LoadingElement";
 import ErrorElement from "./components/ux/ErrorElement";
+
+const chuneycuttGA4Id = "G-4CHJ8VZ28C";
+ReactGA.initialize(chuneycuttGA4Id);
 
 const router = createBrowserRouter([
 	{
