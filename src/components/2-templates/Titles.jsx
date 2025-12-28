@@ -1,8 +1,6 @@
 import ProjectLinks from "../5-atoms/ProjectLinks.jsx";
 
 export default function Titles(props) {
-	console.log(props);
-
 	return (
 		<>
 			<div className="title-container fade fade-right">

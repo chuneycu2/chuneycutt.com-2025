@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { createBrowserRouter } from "react-router";
-import ReactGA from "reactGA4";
+import ReactGA from "react-ga4";
 import DataAndMediaLoader from "./components/data/DataAndMediaLoader.js";
 
 import App from "./App";
