@@ -1,47 +1,50 @@
-@use '../../variables' as *;
-@use '../../base/mixins' as mixins;
+@use "../../variables" as *;
+@use "../../base/mixins" as mixins;
 
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 0;
-  @include mixins.media-breakpoint-up(md) {
-    padding-right: 3rem;
-    position: sticky;
-    top: 2.25rem;
-  }
-  @include mixins.media-breakpoint-up(lg) {
-    padding-right: 4rem;
-  }
-  &.mobile-active {
-    position: relative;
-    top: 50px;
-  }
-  .social-links {
-    border-bottom: 1px solid $gray;
-    padding: 2.5rem 0;
-    @include mixins.media-breakpoint-up(md) {
-      border: none;
-      padding: 3.5rem 0 0 0;
-    }
-    a {
-      padding-right: 1rem;
-      svg {
-        height: 25px;
-        fill: $gray;
-        transition: .4s;
-        width: 25px;
-        &.linkedin {
-          max-height: 23px;
-        }
-      }
-      &:hover {
-        svg {
-          fill: $teal;
-          transition: .4s;
-        }
-      }
-    }
-  }
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 0;
+	@include mixins.media-breakpoint-up(md) {
+		padding-right: 3rem;
+		position: sticky;
+		top: 4rem;
+		.title-container {
+			top: -0.5rem;
+		}
+	}
+	@include mixins.media-breakpoint-up(lg) {
+		padding-right: 4rem;
+	}
+	&.mobile-active {
+		position: relative;
+		top: 50px;
+	}
+	.social-links {
+		border-bottom: 1px solid $gray;
+		padding: 2.5rem 0;
+		@include mixins.media-breakpoint-up(md) {
+			border: none;
+			padding: 3.5rem 0 0 0;
+		}
+		a {
+			padding-right: 1rem;
+			svg {
+				height: 25px;
+				fill: $gray;
+				transition: 0.4s;
+				width: 25px;
+				&.linkedin {
+					max-height: 23px;
+				}
+			}
+			&:hover {
+				svg {
+					fill: $teal;
+					transition: 0.4s;
+				}
+			}
+		}
+	}
 }

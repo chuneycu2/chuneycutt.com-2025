@@ -1,43 +1,43 @@
-@use '../../variables' as *;
-@use '../../base/mixins' as mixins;
+@use "../../variables" as *;
+@use "../../base/mixins" as mixins;
 
 .content {
-    padding: 2rem 0 0 0;
-    @include mixins.media-breakpoint-up(md) {
-        padding: 0 1rem;
-    }
-    & > section {
-        padding-bottom: 2.5rem;
-    }
-    &.mobile-active {
-        position: relative;
-        margin-top: 70px;
-    }
-    .project-links {
-        .project-archive {
-            padding-top: 0 !important;
-            a {
-                color: $teal;
-                font-size: 1rem;
-            }
-            &:first-child {
-                a {
-                    svg.icon {
-                        fill: $teal;
-                        position: relative;
-                        right: 0;
-                        transform: rotate(180deg);
-                        top: 0;
-                    }
-                }
-            }
-        }
-    }
-    .footnotes {
-        border-top: 1px solid $gray;
-        padding-bottom: 1.5rem;
-        p {
-            font-size: .85rem;
-        }
-    }
+	padding: 2rem 0 0 0;
+	@include mixins.media-breakpoint-up(md) {
+		padding: 0 1rem;
+	}
+	& > section {
+		padding-bottom: 3.5rem;
+	}
+	&.mobile-active {
+		position: relative;
+		margin-top: 70px;
+	}
+	.project-links {
+		.project-archive {
+			padding-top: 0 !important;
+			a {
+				color: $teal;
+				font-size: 1rem;
+			}
+			&:first-child {
+				a {
+					svg.icon {
+						fill: $teal;
+						position: relative;
+						right: 0;
+						transform: rotate(180deg);
+						top: 0;
+					}
+				}
+			}
+		}
+	}
+	.footnotes {
+		border-top: 1px solid $gray;
+		padding-bottom: 1.5rem;
+		p {
+			font-size: 0.85rem;
+		}
+	}
 }

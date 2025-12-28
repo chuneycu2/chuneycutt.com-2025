@@ -6,7 +6,7 @@ import ProjectLinks from "../5-atoms/ProjectLinks";
 import Footnote from "../3-organisms/Footnotes.jsx";
 
 export default function Content(props) {
-	const { content, media, footnotes, slug } = props;
+	const { content, media, footnotes } = props;
 
 	const sections = Object.values(content)?.map((sec) => {
 		const title = sec.section_title;
@@ -14,7 +14,7 @@ export default function Content(props) {
 
 		const id = sec.section_title.replace(/\s/g, "");
 		return (
-			<InView threshold={0} rootMargin={"-32px 0% -90% 0%"} key={id}>
+			<InView threshold={0} rootMargin={"-60px 0% -90% 0%"} key={id}>
 				{({ ref, inView }) => (
 					<section id={id} ref={ref} className={inView ? "active" : "inactive"}>
 						<Element

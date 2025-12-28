@@ -1,44 +1,43 @@
 // Define variables, import functions and mixins
-@use '_variables.scss' as *;
-@use 'base/_functions.scss';
-@use 'base/_mixins.scss';
+@use "_variables.scss" as *;
+@use "base/_functions.scss";
+@use "base/_mixins.scss";
 
 // Import AOS (animations)
 //@use '../../node_modules/aos/src/sass/aos.scss';
 
 // Import reboot styles
-@use 'base/_reboot.scss';
+@use "base/_reboot.scss";
 
 // Import Bootstrap core styles
-@use 'base/_bootstrap.scss';
+@use "base/_bootstrap.scss";
 
 // Import typography
-@use 'base/_typography.scss';
+@use "base/_typography.scss";
 
 // Import components
-@use 'components/_main.scss';
+@use "components/_main.scss";
 // Import page-level components
-@use 'components/1-pages/home.scss';
-@use 'components/1-pages/project-archive.scss';
+@use "components/1-pages/project-archive.scss";
 // Import template-level components
-@use 'components/2-templates/sidebar.scss';
-@use 'components/2-templates/content.scss';
-@use 'components/2-templates/titles.scss';
+@use "components/2-templates/sidebar.scss";
+@use "components/2-templates/content.scss";
+@use "components/2-templates/titles.scss";
 // Import organism-level components
-@use 'components/3-organisms/menu.scss';
-@use 'components/3-organisms/section-entries.scss';
+@use "components/3-organisms/menu.scss";
+@use "components/3-organisms/section-entries.scss";
 // Import molecule-level components
-@use 'components/4-molecules/section-entry';
-@use 'components/4-molecules/experience';
-@use 'components/4-molecules/skills-and-tools';
-@use 'components/4-molecules/project';
-@use 'components/4-molecules/about';
-@use 'components/4-molecules/overview-section';
+@use "components/4-molecules/section-entry";
+@use "components/4-molecules/experience";
+@use "components/4-molecules/skills-and-tools";
+@use "components/4-molecules/project";
+@use "components/4-molecules/about";
+@use "components/4-molecules/overview-section";
 // Import atom-level components
-@use 'components/5-atoms/project-links.scss';
-@use 'components/5-atoms/project-skills.scss';
-@use 'components/5-atoms/icons.scss';
+@use "components/5-atoms/project-links.scss";
+@use "components/5-atoms/project-skills.scss";
+@use "components/5-atoms/icons.scss";
 // Import overrides and UX support styles
-@use 'components/ux/_loading-element.scss';
-@use 'components/ux/_hover-active-states';
-@use 'components/ux/_animations';
+@use "components/ux/_loading-element.scss";
+@use "components/ux/_hover-active-states";
+@use "components/ux/_animations";
