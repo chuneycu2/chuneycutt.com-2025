@@ -3,7 +3,7 @@ export default async function DataLoader() {
 	// Fetch with a timestamp to bust cache:
 	let timestamp = new Date().getTime();
 	let domain = "https://chuneycutt.wpenginepowered.com";
-	let postsEndpoint = "wp-json/wp/v2/posts/";
+	let postsEndpoint = "/wp-json/wp/v2/posts/";
 
 	// await fetch results from posts, then media in sequence
 	async function fetchPosts() {
@@ -11,6 +11,7 @@ export default async function DataLoader() {
 			domain + postsEndpoint + "?time=" + timestamp + "&per_page=20",
 		);
 		const postData = await posts.json();
+		console.log(posts);
 
 		return { posts: postData };
 	}
