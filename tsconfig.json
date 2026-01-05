@@ -42,5 +42,6 @@
     "skipLibCheck": true,
     "allowJs": true,
     "checkJs": true
-  }
+  },
+  "include": ["src/**/*"]
 }

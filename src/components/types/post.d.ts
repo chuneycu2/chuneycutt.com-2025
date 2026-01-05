@@ -21,7 +21,6 @@ export interface Post {
     format: string
     meta: Meta
     categories: number[]
-    tags: any[]
     class_list: string[]
     acf: Acf
     yoast_head: string
@@ -70,14 +69,14 @@ export interface Link {
 }
 
 export interface Skill {
-    id: string | number,
-    skill: string,
-    link: string,
+    id: string | number
+    skill: string
+    link: string
 }
 
 export interface Years {
-    start_year: string,
-    end_year: string,
+    start_year: string
+    end_year: string
 }
 
 export interface SocialLinks {
@@ -93,13 +92,13 @@ export interface ComponentsReact {
 }
 
 export interface Entry {
-    company?: string,
-    id?: string | number,
-    job_title?: string,
-    links?: Link[],
-    overview?: string,
-    skills?: Skill[],
-    years?: Years[],
+    company?: string
+    id?: string | number
+    job_title?: string
+    links?: Link[]
+    overview?: string
+    skills?: Skill[]
+    years?: Years[]
     wysiwyg?: string
 }
 
@@ -165,7 +164,7 @@ export interface Breadcrumb {
 
 export interface PotentialAction {
     "@type": string
-    target: any
+    target: string
     "query-input"?: QueryInput
 }
 
