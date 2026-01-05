@@ -2,8 +2,8 @@ import { useRouteError, isRouteErrorResponse } from "react-router";
 import ProjectLinks from "../5-atoms/ProjectLinks.jsx";
 
 export default function ErrorElement() {
-	let error = useRouteError();
-	let home = [
+	const error = useRouteError();
+	const home = [
 		{
 			link_text: "Return home",
 			link_icon: "back",
