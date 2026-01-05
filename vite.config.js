@@ -8,5 +8,17 @@ export default defineConfig({
   ],
   server: {
     host: 'chuneycutt-react.test',
-  }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        silenceDeprecations: ['import', 'slash-div', 'global-builtin'],
+        quietDeps: false,
+      },
+      sass: {
+        silenceDeprecations: ['import', 'slash-div', 'global-builtin'],
+        quietDeps: false,
+      },
+    },
+  },
 })
