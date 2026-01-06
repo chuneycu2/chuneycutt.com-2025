@@ -1,9 +1,9 @@
 export default async function DataLoader() {
 	// WPEngine Cloudflare cache is min-age 600s (10min)
 	// Fetch with a timestamp to bust cache:
-	let timestamp = new Date().getTime();
-	let domain = "https://chuneycutt.wpenginepowered.com";
-	let postsEndpoint = "/wp-json/wp/v2/posts/";
+	const timestamp = new Date().getTime();
+	const domain = "https://chuneycutt.wpenginepowered.com";
+	const postsEndpoint = "/wp-json/wp/v2/posts/";
 
 	const publishedPages = "14";
 

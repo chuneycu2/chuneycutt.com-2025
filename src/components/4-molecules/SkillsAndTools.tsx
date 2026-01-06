@@ -1,11 +1,11 @@
 import ProjectSkills from "../5-atoms/ProjectSkills";
-import IconDevelopment from "../5-atoms/icons/iconDevelopment.jsx";
-import IconDesign from "../5-atoms/icons/IconDesign.jsx";
-import IconAnalytics from "../5-atoms/icons/IconAnalytics.jsx";
-import IconGear from "../5-atoms/icons/iconGear.jsx";
+import IconDevelopment from "../5-atoms/icons/IconDevelopment.tsx";
+import IconDesign from "../5-atoms/icons/IconDesign.tsx";
+import IconAnalytics from "../5-atoms/icons/IconAnalytics.tsx";
+import IconGear from "../5-atoms/icons/IconGear.tsx";
 
 export default function SkillsAndTools(props) {
-    //console.log(props);
+
     const { icon, discipline, type } = props.content;
 
     const getIcon = (category) => {
