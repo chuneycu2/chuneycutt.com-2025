@@ -1,4 +1,4 @@
-import loader from '../../assets/img/gradient-loader.webp';
+import loader from '../../assets/img/gradient-loader-small.webp';
 
 export default function LoadingElement() {
     return (
