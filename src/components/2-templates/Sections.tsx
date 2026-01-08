@@ -1,6 +1,6 @@
 import { Element } from "react-scroll";
 import { InView } from "react-intersection-observer";
-import SectionEntries from "../3-organisms/SectionEntries.jsx";
+import SectionEntries from "../3-organisms/SectionEntries.tsx";
 import ProjectLinks from "../5-atoms/ProjectLinks.jsx";
 
 export default function Sections(props) {

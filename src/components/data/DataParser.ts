@@ -6,9 +6,9 @@ import { useLocation } from 'react-router-dom';
 export default function DataParser(data) {
 
     const location = useLocation();
-    let projectMatch = '^\\/projects\\/.*';
-    let projectPaths = location.pathname.split('/').filter(Boolean);
-    let projectSlug = projectPaths.pop();
+    const projectMatch = '^\\/projects\\/.*';
+    const projectPaths = location.pathname.split('/').filter(Boolean);
+    const projectSlug = projectPaths.pop();
 
     // Return page data based on location
     if (location.pathname === '/')

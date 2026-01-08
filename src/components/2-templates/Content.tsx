@@ -1,5 +1,5 @@
-import Sections from "./Sections.jsx";
-import Footnote from "../3-organisms/Footnotes.jsx";
+import Sections from "./Sections.tsx";
+import Footnote from "../3-organisms/Footnotes.tsx";
 
 export default function Content(props) {
 	const { content, footnotes } = props;

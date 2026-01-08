@@ -2,17 +2,17 @@ import { useEffect } from "react";
 import { useRouteLoaderData } from "react-router";
 
 import DataParser from "../data/DataParser";
-import Sidebar from "../2-templates/Sidebar";
-import Content from "../2-templates/Content";
+import Sidebar from "../2-templates/Sidebar.js";
+import Content from "../2-templates/Content.js";
 
 export default function Home() {
 
 	// Fetch page data
 	const data = useRouteLoaderData("root-data");
-	console.log(data);
 	const pageData = DataParser(data[0].posts);
 	const slug = pageData[0].slug;
 	const thisPage = pageData[0].acf;
+	console.log(thisPage);
 
 	// Set page title
 	useEffect(() => {

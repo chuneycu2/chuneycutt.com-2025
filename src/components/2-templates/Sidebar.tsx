@@ -1,5 +1,5 @@
-import Titles from "./Titles";
-import Menu from "../3-organisms/Menu";
+import Titles from "./Titles.js";
+import Menu from "../3-organisms/Menu.js";
 import SocialLinks from "../5-atoms/SocialLinks.jsx";
 
 export default function Sidebar(props) {

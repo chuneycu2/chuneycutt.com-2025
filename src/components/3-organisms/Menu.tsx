@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link, scrollSpy } from "react-scroll";
 
-import DesktopNav from "./DesktopNav";
+import DesktopNav from "./DesktopNav.js";
 //import MobileNav from "./MobileNav";
 
 export default function Menu(props) {
